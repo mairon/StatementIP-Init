@@ -1,0 +1,18 @@
+<h1>Welcome to our Cell-phone jabber line</h1>
+<div title="Change Password">
+  <% form_tag :action => :sms_submit, :method => :get do %>
+    <fieldset>
+      <%= label_tag :phone, "Cell Phone" %>
+      <%= text_field_tag :phone, nil, { :class => "text" } %>
+      <% if @error %>
+          <div id="phone_error" class="prefs_error"><%= @error %></div>
+      <% elsif @message %>
+          <div id="phone_good" class="prefs_good"><%= @message %></div>
+      <% end %>
+      <%= label_tag :message, "Message" %>
+      <%= text_area_tag :message, nil, { :rows => 8 } %>
+      <%= submit_tag "Send Message" %>
+
+    </fieldset>
+  <% end %>
+</div>

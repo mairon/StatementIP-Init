@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Form: <%= controller.action_name %></title>
+<style type="text/css">
+    .prefs_error,
+    .reg_error
+    {
+        color: red;
+        margin-bottom: 12px;
+    }
+    .prefs_good
+    {
+        color: blue;
+        margin-bottom: 12px;
+    }
+
+
+    label, input
+    {
+        display: block;
+    }
+
+    textarea,
+    input.text
+    {
+        margin-bottom: 12px;
+        width: 95%;
+        padding: .4em;
+    }
+
+    fieldset
+    {
+        padding: 0;
+        border: 0;
+        margin-top: 12px;
+        margin-bottom: 8px;
+    }
+
+    h1
+    {
+        font-size: 1.2em;
+        margin: .6em 0;
+    }
+
+    body
+    {
+        background-color: silver;
+    }
+
+    #big-div
+    {
+        border: #285ea6;
+        border-width: 3px;
+        border-style: solid;
+        width: 450px;
+/*        height: 350px; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        overflow: hidden;
+        background: cornsilk;
+        padding: 12px;
+    }
+</style>
+</head>
+<body>
+    <div id="big-div">
+<%= yield :layout %>
+    </div>
+</body>
+</html>
