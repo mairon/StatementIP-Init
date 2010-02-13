@@ -10,6 +10,10 @@ class CommunicateController < ApplicationController
 
   def sms_submit
     unless params[:phone].blank?
+      if params[:phone].casecmp("help") == 0
+        render  :layout => "sorry", :action => "help"
+        return
+      end
       begin
         message = params[:message].blank? ? "Have a nice day! [from your friendly Rails application]" : params[:message]
         api = Clickatell::API.authenticate('3098823', 'brucep', 'Heather1')

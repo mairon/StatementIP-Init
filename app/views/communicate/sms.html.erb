@@ -1,6 +1,6 @@
 <h1>Welcome to our Cell-phone jabber line</h1>
-<div title="Change Password">
-  <% form_tag :action => :sms_submit, :method => :get do %>
+<div title="Jabber Line">
+  <% form_tag({ :action => :sms_submit }, { :method => :get }) do %>
     <fieldset>
       <%= label_tag :phone, "Cell Phone" %>
       <%= text_field_tag :phone, nil, { :class => "text" } %>
